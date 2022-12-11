@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Create callbacks when MATLAB HTML component's data is changed. -->
+    <script type="text/javascript">
+            function setup(htmlComponent) {
+                htmlComponent.addEventListener("DataChanged", function(event) {
+                document.getElementById("dataDisplay").innerHTML = htmlComponent.Data;
+                });
+            }
+    </script>
+
+    <style>
+    /* Label for Fizz-Buzz/Fibonacci/Combined sections: */
+    .label {
+        color: white;
+        background-color: #111;
+        text-align: center;
+        font-weight: bold;
+        padding: 2px 0px 2px 0px;
+        }
+
+    /* Displayed sequence results for each section: */
+    .content {
+        color: white;
+        background-color: #222;
+        padding: 1px 2px 1px 2px;
+        }
+
+    /* Color tags for each replaced phrase: */
+    phrase1 {
+            color: #de3163;
+        }
+
+    phrase2 {
+            color: #40e0d0;
+        }
+
+    phrase3 {
+            color: #dfff00;
+        }
+
+    error {
+            color: #fa8072
+        }
+    </style>
+</head>
+
+<body>
+    <div style="font-family:sans-serif;">
+        <div id ="dataDisplay"></div>
+    </div>
+</body>
+</html>

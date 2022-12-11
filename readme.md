@@ -1,6 +1,6 @@
 # Fib-Buzz
 
-Contains stand-alone functions for fizz-buzz and Fibonacci sequence processing as well as an application to process user inputs and display results.
+Contains stand-alone functions for fizz-buzz and Fibonacci sequence processing as well as an application to process user inputs and display results. The application automatically regenerates and displays results for each of the algorithms and applies styling with HTML/CSS.
 
 ![](screenShot.png)
 
