@@ -58,7 +58,7 @@ function resultString = FizzBuzz(input, divisor1, divisor2, phrase1, phrase2)
         end
     end
 
-    resultString = strjoin(processedValues, ' ');
+    resultString = strjoin(processedValues, ', ');
 end
 
 % -------------------------------------------------------------------------------------------------------------------- %

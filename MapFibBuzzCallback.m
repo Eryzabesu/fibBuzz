@@ -66,7 +66,7 @@ function Callback_Run(app, event)
             z = str2double(GetValue(app, app.Field_Z));
 
             sequence     = Fibonacci(input, y, z);
-            resultString = strtrim(sprintf('%d ', sequence));
+            resultString = regexprep(sprintf('%d, ', sequence), ', $', '');
         else
             return; % Invalid inputs.
         end
