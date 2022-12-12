@@ -101,7 +101,6 @@ function Callback_InputValidation(app, event)
         divisor1 = str2double(GetValue(app, app.Field_Divisor1));
         divisor2 = str2double(GetValue(app, app.Field_Divisor2));
 
-
         fizzResults = FizzBuzz(input, divisor1, divisor2, 'phrase1', 'phrase2');
 
         if (runCombined)
@@ -111,6 +110,10 @@ function Callback_InputValidation(app, event)
         % Invalid inputs.
     end
 
+    % To prevent matching the combined phrase, look for instances of phrase1 or phrase2 matching the following pattern:
+    % 1) Following either the beginning of the string or a space (?<= |^).
+    % 2) Followed by either a comma or the end of the string (?=,|$).
+    % Replace them with their respective values, and the combined phrase with the appropriate combined form.
     AddStyling = @(s) regexprep(s, ...
         {'(?<= |^)phrase1(?=,|$)', '(?<= |^)phrase2(?=,|$)', '(?<= |^)phrase1phrase2(?=,|$)'}, ...
         {phrase1, phrase2, phrase3});
